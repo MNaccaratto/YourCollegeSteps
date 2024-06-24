@@ -14,6 +14,7 @@
 		925C69D12C29B6F600C8781F /* YourCollegeStepsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C69D02C29B6F600C8781F /* YourCollegeStepsTests.swift */; };
 		925C69DB2C29B6F600C8781F /* YourCollegeStepsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C69DA2C29B6F600C8781F /* YourCollegeStepsUITests.swift */; };
 		925C69DD2C29B6F600C8781F /* YourCollegeStepsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C69DC2C29B6F600C8781F /* YourCollegeStepsUITestsLaunchTests.swift */; };
+		92FF46CD2C2C63E900E2BE37 /* APInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF46CC2C2C63E900E2BE37 /* APInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		925C69D62C29B6F600C8781F /* YourCollegeStepsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YourCollegeStepsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		925C69DA2C29B6F600C8781F /* YourCollegeStepsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourCollegeStepsUITests.swift; sourceTree = "<group>"; };
 		925C69DC2C29B6F600C8781F /* YourCollegeStepsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourCollegeStepsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		92FF46CC2C2C63E900E2BE37 /* APInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				925C69BF2C29B6F500C8781F /* YourCollegeStepsApp.swift */,
 				925C69C12C29B6F500C8781F /* ContentView.swift */,
+				92FF46CC2C2C63E900E2BE37 /* APInfoView.swift */,
 				925C69C32C29B6F600C8781F /* Assets.xcassets */,
 				925C69C52C29B6F600C8781F /* Preview Content */,
 			);
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				925C69C22C29B6F500C8781F /* ContentView.swift in Sources */,
+				92FF46CD2C2C63E900E2BE37 /* APInfoView.swift in Sources */,
 				925C69C02C29B6F500C8781F /* YourCollegeStepsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
