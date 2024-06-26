@@ -75,11 +75,14 @@ struct FreshmanView: View {
     var body: some View {
         VStack {
             
-            Text("Welcome to high school!\n")
+            Text("Welcome to high school!")
                 .font(.title)
+            Text("Click the button with the information you are looking for!")
+                .font(.title2)
             
             
-            Text("Continue with the quiz to find the information you are looking for!")
+                .multilineTextAlignment(.center)
+                .padding(50.0)
             
             NavigationLink(destination: APInfoView()) {
                 Text("APs")
@@ -89,9 +92,8 @@ struct FreshmanView: View {
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
-            .padding()
             
-            NavigationLink(destination: FreshmanSubPageTwoView()) {
+            NavigationLink(destination: GPAInfoView()) {
                 Text("GPA Converter + Info")
                     .font(.title)
                     .padding()
@@ -99,8 +101,19 @@ struct FreshmanView: View {
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
-            NavigationLink(destination: FreshmanSubPageThreeView()) {
+            .padding()
+            
+            NavigationLink(destination: CollegePathMajorView()) {
                 Text("College Paths/Majors")
+                    .font(.title)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+            
+            NavigationLink(destination: PSATInfoView()) {
+                Text("Taking the PSAT")
                     .font(.title)
                     .padding()
                     .background(Color.blue)
@@ -117,25 +130,55 @@ struct FreshmanView: View {
 struct SophomoreView: View {
     var body: some View {
         VStack {
-            NavigationLink(destination: SophomoreSubPageOneView()) {
-                Text("Sophomore SubPage One")
-                    .font(.title)
-                    .padding()
-                    .background(Color.green)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-            }
-            .padding()
             
-            NavigationLink(destination: SophomoreSubPageTwoView()) {
-                Text("Sophomore SubPage Two")
+            Text("Welcome to Sophomore Year!")
+                .font(.title)
+            Text("Click the button with the information you are looking for!")
+                .font(.title2)
+            
+            
+                .multilineTextAlignment(.center)
+                .padding(50.0)
+            
+            NavigationLink(destination: APInfoView()) {
+                Text("APs")
                     .font(.title)
                     .padding()
                     .background(Color.green)
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
-            .padding()
+
+            
+            NavigationLink(destination: GPAInfoView()) {
+                Text("GPA Converter + Info")
+                    .font(.title)
+                    .padding()
+                    .background(Color.green)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+
+            
+            NavigationLink(destination: CollegePathMajorView()) {
+                Text("College Paths/Majors")
+                    .font(.title)
+                    .padding()
+                    .background(Color.green)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+
+            
+            NavigationLink(destination: PSATInfoView()) {
+                Text("Taking the PSAT")
+                    .font(.title)
+                    .padding()
+                    .background(Color.green)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+
         }
         .navigationTitle("Sophomore Year")
     }
@@ -143,27 +186,54 @@ struct SophomoreView: View {
 
 struct JuniorView: View {
     var body: some View {
-        VStack {
-            NavigationLink(destination: JuniorSubPageOneView()) {
-                Text("Junior SubPage One")
-                    .font(.title)
-                    .padding()
-                    .background(Color.orange)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-            }
-            .padding()
-            
-            NavigationLink(destination: JuniorSubPageTwoView()) {
-                Text("Junior SubPage Two")
-                    .font(.title)
-                    .padding()
-                    .background(Color.orange)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-            }
-            .padding()
+        Text("Welcome to Junior Year!")
+            .font(.title)
+        Text("Click the button with the information you are looking for!")
+            .font(.title2)
+        
+        
+            .multilineTextAlignment(.center)
+            .padding(50.0)
+        
+        NavigationLink(destination: APInfoView()) {
+            Text("APs")
+                .font(.title)
+                .padding()
+                .background(Color.orange)
+                .foregroundColor(.white)
+                .cornerRadius(10)
         }
+
+        
+        NavigationLink(destination: GPAInfoView()) {
+            Text("GPA Converter + Info")
+                .font(.title)
+                .padding()
+                .background(Color.orange)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+        }
+
+        
+        NavigationLink(destination: CollegePathMajorView()) {
+            Text("College Paths/Majors")
+                .font(.title)
+                .padding()
+                .background(Color.orange)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+        }
+
+        
+        NavigationLink(destination: SATInfoView()) {
+            Text("Taking the SAT")
+                .font(.title)
+                .padding()
+                .background(Color.orange)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+        }
+
         .navigationTitle("Junior Year")
     }
 }
@@ -192,24 +262,6 @@ struct SeniorView: View {
             .padding()
         }
         .navigationTitle("Senior Year")
-    }
-}
-
-struct FreshmanSubPageTwoView: View {
-    var body: some View {
-        Text("Freshman SubPage Two Content")
-            .font(.largeTitle)
-            .padding()
-            .navigationTitle("Freshman SubPage Two")
-    }
-}
-
-struct FreshmanSubPageThreeView: View {
-    var body: some View {
-        Text("Freshman SubPage Three Content")
-            .font(.largeTitle)
-            .padding()
-            .navigationTitle("Freshman SubPage Two")
     }
 }
 
