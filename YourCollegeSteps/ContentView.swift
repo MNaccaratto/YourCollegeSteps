@@ -11,6 +11,32 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack(alignment: .center) {
+                Image("YCSLogo")
+                    .resizable(resizingMode: .stretch)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/)
+                    .cornerRadius(15.0)
+                
+                NavigationLink(destination: QuizView()) {
+                    Text("Begin the Quiz")
+                        .font(.largeTitle)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding()
+                
+                
+            }
+            .navigationTitle("Home")
+        }
+    }
+}
+struct QuizView: View {
+    var body: some View {
+        NavigationView {
+            VStack(alignment: .center) {
                 
                 Spacer()
                 Text("Staring Quiz")
@@ -66,11 +92,9 @@ struct ContentView: View {
                 }
                 .padding()
             }
-            .navigationTitle("YourCollegeSteps")
         }
     }
 }
-
 struct FreshmanView: View {
     var body: some View {
         VStack {
@@ -242,6 +266,7 @@ struct SeniorView: View {
     var body: some View {
         VStack {
             Text("CONGRATS GRADUATE!!")
+            
             Text("Welcome to Senior Year!")
                 .font(.largeTitle)
             NavigationLink(destination: APInfoView()) {
