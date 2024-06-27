@@ -241,6 +241,9 @@ struct JuniorView: View {
 struct SeniorView: View {
     var body: some View {
         VStack {
+            Text("CONGRATS GRADUATE!!")
+            Text("Welcome to Senior Year!")
+                .font(.largeTitle)
             NavigationLink(destination: APInfoView()) {
                 Text("APs")
                     .font(.title)
@@ -257,8 +260,8 @@ struct SeniorView: View {
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
-            NavigationLink(destination: SeniorSubPageOneView()) {
-                Text("Senior SubPage One")
+            NavigationLink(destination: CollegeDeadlinesView()) {
+                Text("College Deadlines")
                     .font(.title)
                     .padding()
                     .background(Color.red)
@@ -267,8 +270,32 @@ struct SeniorView: View {
             }
 
             
-            NavigationLink(destination: SeniorSubPageTwoView()) {
-                Text("Senior SubPage Two")
+            NavigationLink(destination: CollegePathMajorView()) {
+                Text("College Path/Major")
+                    .font(.title)
+                    .padding()
+                    .background(Color.red)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+            NavigationLink(destination: CollegeApplicationInfoView()) {
+                Text("College Applications")
+                    .font(.title)
+                    .padding()
+                    .background(Color.red)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+            NavigationLink(destination: FinancialAidInforView()) {
+                Text("Financial Aid")
+                    .font(.title)
+                    .padding()
+                    .background(Color.red)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+            NavigationLink(destination: CollegeCommitmentInfoView()) {
+                Text("College Commitment")
                     .font(.title)
                     .padding()
                     .background(Color.red)
