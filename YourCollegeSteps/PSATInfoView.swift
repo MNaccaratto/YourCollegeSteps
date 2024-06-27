@@ -9,7 +9,10 @@ import SwiftUI
 
 struct PSATInfoView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("The PSAT")
+            .font(.title)
+            .fontWeight(.bold)
+        Text("")
     }
 }
 
