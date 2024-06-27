@@ -8,18 +8,124 @@
 import SwiftUI
 
 struct APInfoView: View {
-    var body: some View {
-        Text("Advanced Placement")
-            .font(.title)
-            .fontWeight(.bold)
-            
-        Text("\nAdvanced Placement courses are classes provided by the College Board that, if you score high enough on the final exam, it could be eligible for college credits! These exams are graded on a score of 1-5, 1 being the worst and 5 being the best.\n\nAP Exams are not based on how many questions you get right, but how you compare to the majority of students. If everyone in the country got a perfect score, then everyone's score would be a 3!\n\nIt is very important that you create a college board account, with an email that you will keep, so that you may be placed into your teacher's 'AP Classroom'!\n\nOnce you have the scores you'd like, you can select the college you wish your scores to go to.\n\nDo Note: Some colleges have specific scores that will be eligible for college credit, though they usually accept 3 or higher")
-            .padding(.horizontal)
+    @State private var selectedAPClasses: Set<String> = []
+    @State private var isDropDownExpanded = false
+    @State private var showCompletionMessage = false
+    let apClasses = [
+        "AP Art History", "AP Biology", "AP Calculus AB", "AP Calculus BC",
+        "AP Chemistry", "AP Chinese Language and Culture", "AP Comparative Government and Politics",
+        "AP Computer Science A", "AP Computer Science Principles", "AP English Language and Composition",
+        "AP English Literature and Composition", "AP Environmental Science", "AP European History",
+        "AP French Language and Culture", "AP German Language and Culture", "AP Human Geography",
+        "AP Italian Language and Culture", "AP Japanese Language and Culture", "AP Latin",
+        "AP Macroeconomics", "AP Microeconomics", "AP Music Theory", "AP Physics 1", "AP Physics 2",
+        "AP Physics C: Electricity and Magnetism", "AP Physics C: Mechanics", "AP Psychology",
+        "AP Spanish Language and Culture", "AP Spanish Literature and Culture", "AP Statistics",
+        "AP Studio Art: 2-D Design", "AP Studio Art: 3-D Design", "AP Studio Art: Drawing",
+        "AP United States Government and Politics", "AP United States History", "AP World History"
+    ]
     
-             
+    var body: some View {
+        NavigationView {
+            VStack {
+                Text("AP Information")
+                    .font(.title)
+                    .padding(.bottom, 15.0)
+                
+                Text("Step 1: Log on to your College Board account")
+                    .multilineTextAlignment(.leading)
+                
+                NavigationLink(destination: CollegeBoardAccount()) {
+                    Text("How to create a College Board account")
+                        .font(.body)
+                }
+                
+                Text("Step 2: Select the AP classes you are taking")
+                    .padding(.top, 15)
+                
+                DisclosureGroup("Select AP Classes", isExpanded: $isDropDownExpanded) {
+                    VStack {
+                        ScrollView {
+                            APSelectionView(apClasses: apClasses, selectedAPClasses: $selectedAPClasses)
+                        }
+                        .frame(maxHeight: 300) // Ensure the ScrollView is constrained within a maximum height
+                        
+                        Button(action: {
+                            isDropDownExpanded = false
+                            showCompletionMessage = true
+                        }) {
+                            Text("Done")
+                                .font(.body)
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color.blue)
+                                .cornerRadius(8)
+                        }
+                        .padding(.top, 10)
+                    }
+                }
+                .padding()
+                
+                if showCompletionMessage {
+                    VStack {
+                        Text("Congratulations!")
+                            .font(.headline)
+                        Text("You are taking \(selectedAPClasses.count) AP Classes:")
+                        Text(selectedAPClasses.joined(separator: ", "))
+                            .multilineTextAlignment(.center)
+                    }
+                    .padding()
+                }
+                
+                Spacer()
+            }
+            .navigationTitle("AP Information")
+            .navigationBarHidden(true)
+            .padding()
+        }
     }
 }
 
-#Preview {
-    APInfoView()
+struct APSelectionView: View {
+    let apClasses: [String]
+    @Binding var selectedAPClasses: Set<String>
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            ForEach(apClasses, id: \.self) { apClass in
+                HStack {
+                    Text(apClass)
+                    Spacer()
+                    if selectedAPClasses.contains(apClass) {
+                        Image(systemName: "checkmark")
+                            .foregroundColor(.blue)
+                    }
+                }
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    if selectedAPClasses.contains(apClass) {
+                        selectedAPClasses.remove(apClass)
+                    } else {
+                        selectedAPClasses.insert(apClass)
+                    }
+                }
+                .padding(.vertical, 4)
+            }
+        }
+        .padding()
+        .background(Color(.systemGray6))
+        .cornerRadius(8)
+    }
+}
+
+struct CollegeBoardAccount: View {
+    var body: some View {
+        Text("College Board Account Creation Steps")
+    }
+}
+
+struct APInfoView_Previews: PreviewProvider {
+    static var previews: some View {
+        APInfoView()
+    }
 }
