@@ -241,6 +241,22 @@ struct JuniorView: View {
 struct SeniorView: View {
     var body: some View {
         VStack {
+            NavigationLink(destination: APInfoView()) {
+                Text("APs")
+                    .font(.title)
+                    .padding()
+                    .background(Color.red)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }  
+            NavigationLink(destination: GPAInfoView()) {
+                Text("GPA Converter + Info")
+                    .font(.title)
+                    .padding()
+                    .background(Color.red)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
             NavigationLink(destination: SeniorSubPageOneView()) {
                 Text("Senior SubPage One")
                     .font(.title)
@@ -249,7 +265,7 @@ struct SeniorView: View {
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
-            .padding()
+
             
             NavigationLink(destination: SeniorSubPageTwoView()) {
                 Text("Senior SubPage Two")
@@ -259,7 +275,6 @@ struct SeniorView: View {
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
-            .padding()
         }
         .navigationTitle("Senior Year")
     }

@@ -14,6 +14,10 @@
 		925C69D12C29B6F600C8781F /* YourCollegeStepsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C69D02C29B6F600C8781F /* YourCollegeStepsTests.swift */; };
 		925C69DB2C29B6F600C8781F /* YourCollegeStepsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C69DA2C29B6F600C8781F /* YourCollegeStepsUITests.swift */; };
 		925C69DD2C29B6F600C8781F /* YourCollegeStepsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925C69DC2C29B6F600C8781F /* YourCollegeStepsUITestsLaunchTests.swift */; };
+		92A002F22C2DB6A300D452C4 /* CollegeDeadlinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A002F12C2DB6A300D452C4 /* CollegeDeadlinesView.swift */; };
+		92A002F42C2DB70B00D452C4 /* CollegeApplicationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A002F32C2DB70B00D452C4 /* CollegeApplicationInfoView.swift */; };
+		92A002F62C2DB71700D452C4 /* FinancialAidInforView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A002F52C2DB71700D452C4 /* FinancialAidInforView.swift */; };
+		92A002F82C2DB72400D452C4 /* CollegeCommitmentInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A002F72C2DB72400D452C4 /* CollegeCommitmentInfoView.swift */; };
 		92FF46CD2C2C63E900E2BE37 /* APInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF46CC2C2C63E900E2BE37 /* APInfoView.swift */; };
 		92FF46DA2C2C89A600E2BE37 /* PSATInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF46D92C2C89A600E2BE37 /* PSATInfoView.swift */; };
 		92FF46DC2C2C89B900E2BE37 /* CollegePathMajorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FF46DB2C2C89B900E2BE37 /* CollegePathMajorView.swift */; };
@@ -49,6 +53,10 @@
 		925C69D62C29B6F600C8781F /* YourCollegeStepsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YourCollegeStepsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		925C69DA2C29B6F600C8781F /* YourCollegeStepsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourCollegeStepsUITests.swift; sourceTree = "<group>"; };
 		925C69DC2C29B6F600C8781F /* YourCollegeStepsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourCollegeStepsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		92A002F12C2DB6A300D452C4 /* CollegeDeadlinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeDeadlinesView.swift; sourceTree = "<group>"; };
+		92A002F32C2DB70B00D452C4 /* CollegeApplicationInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeApplicationInfoView.swift; sourceTree = "<group>"; };
+		92A002F52C2DB71700D452C4 /* FinancialAidInforView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialAidInforView.swift; sourceTree = "<group>"; };
+		92A002F72C2DB72400D452C4 /* CollegeCommitmentInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeCommitmentInfoView.swift; sourceTree = "<group>"; };
 		92FF46CC2C2C63E900E2BE37 /* APInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APInfoView.swift; sourceTree = "<group>"; };
 		92FF46D92C2C89A600E2BE37 /* PSATInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PSATInfoView.swift; sourceTree = "<group>"; };
 		92FF46DB2C2C89B900E2BE37 /* CollegePathMajorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegePathMajorView.swift; sourceTree = "<group>"; };
@@ -106,10 +114,14 @@
 			children = (
 				925C69BF2C29B6F500C8781F /* YourCollegeStepsApp.swift */,
 				925C69C12C29B6F500C8781F /* ContentView.swift */,
+				92A002F32C2DB70B00D452C4 /* CollegeApplicationInfoView.swift */,
+				92A002F52C2DB71700D452C4 /* FinancialAidInforView.swift */,
+				92A002F72C2DB72400D452C4 /* CollegeCommitmentInfoView.swift */,
 				92FF46DF2C2C89DE00E2BE37 /* SATInfoView.swift */,
 				92FF46DD2C2C89CC00E2BE37 /* GPAInfoView.swift */,
 				92FF46DB2C2C89B900E2BE37 /* CollegePathMajorView.swift */,
 				92FF46D92C2C89A600E2BE37 /* PSATInfoView.swift */,
+				92A002F12C2DB6A300D452C4 /* CollegeDeadlinesView.swift */,
 				92FF46CC2C2C63E900E2BE37 /* APInfoView.swift */,
 				925C69C32C29B6F600C8781F /* Assets.xcassets */,
 				925C69C52C29B6F600C8781F /* Preview Content */,
@@ -274,11 +286,15 @@
 			files = (
 				92FF46DA2C2C89A600E2BE37 /* PSATInfoView.swift in Sources */,
 				92FF46DC2C2C89B900E2BE37 /* CollegePathMajorView.swift in Sources */,
+				92A002F62C2DB71700D452C4 /* FinancialAidInforView.swift in Sources */,
 				925C69C22C29B6F500C8781F /* ContentView.swift in Sources */,
 				92FF46DE2C2C89CC00E2BE37 /* GPAInfoView.swift in Sources */,
+				92A002F22C2DB6A300D452C4 /* CollegeDeadlinesView.swift in Sources */,
 				92FF46CD2C2C63E900E2BE37 /* APInfoView.swift in Sources */,
 				925C69C02C29B6F500C8781F /* YourCollegeStepsApp.swift in Sources */,
+				92A002F42C2DB70B00D452C4 /* CollegeApplicationInfoView.swift in Sources */,
 				92FF46E02C2C89DE00E2BE37 /* SATInfoView.swift in Sources */,
+				92A002F82C2DB72400D452C4 /* CollegeCommitmentInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
